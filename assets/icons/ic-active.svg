@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="38" viewBox="0 0 36 38">
+  <g id="Group_150" data-name="Group 150" transform="translate(-362 -112)">
+    <text id="ACTIVE" transform="translate(362 146)" fill="#00a36c" font-size="10" font-family="Poppins-SemiBold, Poppins" font-weight="600" opacity="0.76"><tspan x="0" y="0">ACTIVE</tspan></text>
+    <g id="Group_67" data-name="Group 67" transform="translate(0 -14)">
+      <path id="Polygon_2" data-name="Polygon 2" d="M11,0l2.513,4.134,4.667-1.6-.817,4.733L22,8.946l-3.764,3.117,2.438,4.177-4.951.042L14.82,21,11,17.948,7.18,21l-.9-4.718L1.327,16.24l2.438-4.177L0,8.946,4.637,7.266,3.82,2.533l4.667,1.6Z" transform="translate(369 126)" fill="#00a36c"/>
+      <path id="Polygon_3" data-name="Polygon 3" d="M7,0,8.6,2.756l2.97-1.068-.52,3.155L14,5.964,11.6,8.042l1.551,2.784-3.15.028L9.431,14,7,11.965,4.569,14l-.574-3.145-3.15-.028L2.4,8.042,0,5.964l2.951-1.12-.52-3.155L5.4,2.756Z" transform="translate(373 130)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

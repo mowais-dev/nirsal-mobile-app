@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="87.386" height="76.954" viewBox="0 0 87.386 76.954">
+  <g id="Group_105" data-name="Group 105" transform="translate(-167 -184)">
+    <path id="Icon_material-email" data-name="Icon material-email" d="M81.647,6H11.739a8.727,8.727,0,0,0-8.695,8.739L3,67.17a8.764,8.764,0,0,0,8.739,8.739H81.647a8.764,8.764,0,0,0,8.739-8.739V14.739A8.764,8.764,0,0,0,81.647,6Zm0,17.477L46.693,45.324,11.739,23.477V14.739L46.693,36.585,81.647,14.739Z" transform="translate(164 185.046)" fill="#2be1a9"/>
+    <g id="Layer_2" data-name="Layer 2" transform="translate(226.328 184) rotate(90)">
+      <g id="invisible_box" data-name="invisible box" transform="translate(0 0)">
+        <rect id="Rectangle_125" data-name="Rectangle 125" width="32.328" height="32.328" fill="none"/>
+      </g>
+      <g id="Q3_icons" data-name="Q3 icons" transform="translate(1.342 3.585)">
+        <path id="Path_28" data-name="Path 28" d="M19.588,5.5l6.574,6.641-6.574,6.574V13.954l-2.817.134A39.529,39.529,0,0,0,5.97,15.7a17.513,17.513,0,0,1,11.2-5.031l2.415-.2V5.5M17.642,0A.8.8,0,0,0,16.9.873V7.984C6.708,8.99.134,15.966,0,23.01c0,.4.134.671.4.671s.47-.2.738-.738c1.61-3.622,5.232-5.7,15.764-6.171v6.507a.8.8,0,0,0,.738.872.6.6,0,0,0,.537-.268L29.247,12.813a1.006,1.006,0,0,0,0-1.342L18.179.269A.6.6,0,0,0,17.642,0Z" transform="translate(0 0)" fill="#f5f5f5"/>
+      </g>
+    </g>
+  </g>
+</svg>
