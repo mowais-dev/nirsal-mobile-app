@@ -1,6 +1,6 @@
 # 🌱 NIRSAL Mobile
 
-![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart&logoColor=white) ![Android](https://img.shields.io/badge/Android-target-green?logo=android&logoColor=white) ![iOS](https://img.shields.io/badge/iOS-target-lightgrey?logo=apple&logoColor=black) ![Backend](https://img.shields.io/badge/Laravel-API%20backend-red?logo=laravel&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart&logoColor=white) ![Android](https://img.shields.io/badge/Android-target-green?logo=android&logoColor=white) ![iOS](https://img.shields.io/badge/iOS-target-lightgrey?logo=apple&logoColor=black) ![Backend](https://img.shields.io/badge/Laravel-API%20backend-red?logo=laravel&logoColor=white) ![Google Maps](https://img.shields.io/badge/Google%20Maps-enabled-orange?logo=googlemaps&logoColor=white)
 
 Mobile field app for NIRSAL built with Flutter, integrating a Laravel backend. Supports offline-first capture flows and field mapping for farm area calculation.
 
@@ -12,11 +12,11 @@ Mobile field app for NIRSAL built with Flutter, integrating a Laravel backend. S
 - **Farmer and dashboard views**: Carousels, cards, and tabbed screens for recent updates, farmers, assignments, and notifications.
 
 ## Tech Stack
-- Flutter with Provider state management
-- Dio for HTTP (when pointed at Laravel API)
-- Google Maps Flutter + Geolocator for geospatial capture
-- Shared Preferences for local caching of tokens and user profile
-- json_serializable for typed models
+- 🐦 Flutter with Provider state management
+- 🔗 Dio for HTTP (when pointed at Laravel API)
+- 🗺️ Google Maps Flutter + Geolocator for geospatial capture
+- 💾 Shared Preferences for local caching of tokens and user profile
+- 🧬 json_serializable for typed models
 
 ## Setup
 1. Install Flutter (3.3.4+), Android/iOS toolchains.
