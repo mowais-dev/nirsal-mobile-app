@@ -6,7 +6,6 @@ import 'package:nirsal/widgets/body_container.dart';
 
 import '../../../../constants.dart';
 import '../../../../widgets/notification_center.dart';
-import '../../../../widgets/request_card.dart';
 import '../../../../widgets/search_button.dart';
 import '../../../../widgets/slider_card.dart';
 import '../../../../widgets/tab_switch.dart';
@@ -20,13 +19,13 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-
-  final CarouselController _carouselController = CarouselController();
+  final CarouselSliderController _carouselController =
+      CarouselSliderController();
 
   int currentSlider = 0;
   int assignedActiveTab = 0;
-  
-  List items = [1,2];
+
+  List items = [1, 2];
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +41,6 @@ class _DashboardState extends State<Dashboard> {
               fit: BoxFit.cover,
             ),
           ),
-
           Padding(
             padding: EdgeInsets.only(
               top: 75.w,
@@ -52,64 +50,58 @@ class _DashboardState extends State<Dashboard> {
             child: Column(
               children: [
                 const UserData(),
-
                 SizedBox(
                   height: 16.w,
                 ),
-
                 const NotificationCenter(),
-
                 SizedBox(
                   height: 27.w,
                 ),
-
                 SizedBox(
                   height: 126.h,
                   child: CarouselSlider(
-                    options: CarouselOptions(
-                      viewportFraction: 0.8,
-                      autoPlay: false,
-                      disableCenter: true,
-                      enableInfiniteScroll: false,
-                      onPageChanged: (index, reason) {
-                        setState(() {
-                          currentSlider = index;
-                        });
-                      },
-                      height: 126.h,
-                      padEnds: false,
-                    ),
-                    carouselController: _carouselController,
-                    items: [
-                      Container(
-                        padding: const EdgeInsets.only(right: 40.0),
-                        child: const SliderCard(
-                          image: 'assets/images/farmers.png',
-                          title: 'Farmers',
-                          description: 'Analyzes individual farmers\' performance, productivity, and sustainability',
-                          time: '10 minutes ago',
-                          color: kLightPurpleColor,
-                        ),
+                      options: CarouselOptions(
+                        viewportFraction: 0.8,
+                        autoPlay: false,
+                        disableCenter: true,
+                        enableInfiniteScroll: false,
+                        onPageChanged: (index, reason) {
+                          setState(() {
+                            currentSlider = index;
+                          });
+                        },
+                        height: 126.h,
+                        padEnds: false,
                       ),
-
-                      Container(
-                        padding: const EdgeInsets.only(right: 40.0),
-                        child: const SliderCard(
-                          image: 'assets/images/farmers2.png',
-                          title: 'Farms',
-                          description: 'Analyzes farmer\'s farmlands productivity, and sustainability',
-                          time: '10 minutes ago',
-                          color: kCardColor,
+                      carouselController: _carouselController,
+                      items: [
+                        Container(
+                          padding: const EdgeInsets.only(right: 40.0),
+                          child: const SliderCard(
+                            image: 'assets/images/farmers.png',
+                            title: 'Farmers',
+                            description:
+                                'Analyzes individual farmers\' performance, productivity, and sustainability',
+                            time: '10 minutes ago',
+                            color: kLightPurpleColor,
+                          ),
                         ),
-                      )
-                    ]
-                  ),
+                        Container(
+                          padding: const EdgeInsets.only(right: 40.0),
+                          child: const SliderCard(
+                            image: 'assets/images/farmers2.png',
+                            title: 'Farms',
+                            description:
+                                'Analyzes farmer\'s farmlands productivity, and sustainability',
+                            time: '10 minutes ago',
+                            color: kCardColor,
+                          ),
+                        )
+                      ]),
                 ),
-
                 SizedBox(
                   height: 24.w,
                 ),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
@@ -117,11 +109,9 @@ class _DashboardState extends State<Dashboard> {
                     (index) => buildDotNav(index: index),
                   ),
                 ),
-
                 SizedBox(
                   height: 25.w,
                 ),
-
                 Container(
                   decoration: BoxDecoration(
                     color: kYellowColor,
@@ -145,11 +135,9 @@ class _DashboardState extends State<Dashboard> {
                         activeTextColor: kTextColor,
                         activeColor: kLightGrayShade3,
                       ),
-
                       SizedBox(
                         width: 15.w,
                       ),
-
                       TabSwitch(
                         onTap: () {
                           setState(() {
@@ -166,35 +154,30 @@ class _DashboardState extends State<Dashboard> {
                     ],
                   ),
                 ),
-
                 SizedBox(
                   height: 12.w,
                 ),
-
                 Row(
                   children: [
                     SizedBox(
                       width: 50.w,
                     ),
-
                     Column(
                       children: [
                         TextButton(
-                          onPressed: () {},
-                          style: const ButtonStyle(
-                            padding: WidgetStatePropertyAll(EdgeInsets.zero),
-                            minimumSize: WidgetStatePropertyAll(Size(0, 0)),
-                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                          ),
-                          child: Text(
-                            'Sales / Loan',
-                            style: TextStyle(
-                              fontSize: 14.sp,
-                              color: kBlackColor,
+                            onPressed: () {},
+                            style: const ButtonStyle(
+                              padding: WidgetStatePropertyAll(EdgeInsets.zero),
+                              minimumSize: WidgetStatePropertyAll(Size(0, 0)),
+                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
-                          )
-                        ),
-                    
+                            child: Text(
+                              'Sales / Loan',
+                              style: TextStyle(
+                                fontSize: 14.sp,
+                                color: kBlackColor,
+                              ),
+                            )),
                         Container(
                           width: 90.w,
                           height: 2,
@@ -202,29 +185,26 @@ class _DashboardState extends State<Dashboard> {
                         )
                       ],
                     ),
-
                     SizedBox(
                       width: 37.w,
                     ),
-
-                     Column(
+                    Column(
                       children: [
                         TextButton(
-                          onPressed: () {},
-                          style: const ButtonStyle(
-                            padding: WidgetStatePropertyAll(EdgeInsets.zero),
-                            minimumSize: WidgetStatePropertyAll(Size(0, 0)),
-                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                          ),
-                          child: Text(
-                            'Harvest',
-                            style: TextStyle(
-                              fontSize: 14.sp,
-                              color: kBlackColor,
+                            onPressed: () {},
+                            style: const ButtonStyle(
+                              padding: WidgetStatePropertyAll(EdgeInsets.zero),
+                              minimumSize: WidgetStatePropertyAll(Size(0, 0)),
+                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
-                          )
-                        ),
-                    
+                            child: Text(
+                              'Harvest',
+                              style: TextStyle(
+                                fontSize: 14.sp,
+                                color: kBlackColor,
+                              ),
+                            )),
+
                         // Container(
                         //   width: 90.w,
                         //   height: 2,
@@ -232,17 +212,13 @@ class _DashboardState extends State<Dashboard> {
                         // )
                       ],
                     ),
-
                     const Spacer(),
-
                     const SearchButton(),
                   ],
                 ),
-
                 SizedBox(
                   height: 17.w,
                 ),
-
                 Expanded(
                   child: ListView.separated(
                     itemCount: 10,
@@ -274,11 +250,9 @@ class _DashboardState extends State<Dashboard> {
                                 fit: BoxFit.cover,
                               ),
                             ),
-
                             SizedBox(
                               width: 20.w,
                             ),
-                  
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -290,9 +264,7 @@ class _DashboardState extends State<Dashboard> {
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
-
-                                Text.rich(
-                                  TextSpan(
+                                Text.rich(TextSpan(
                                     text: 'paid ',
                                     style: TextStyle(
                                       color: kBlackColor,
@@ -308,7 +280,6 @@ class _DashboardState extends State<Dashboard> {
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ),
-
                                       TextSpan(
                                         text: ' out of',
                                         style: TextStyle(
@@ -317,7 +288,6 @@ class _DashboardState extends State<Dashboard> {
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ),
-
                                       TextSpan(
                                         text: ' N27,029.98k',
                                         style: TextStyle(
@@ -326,14 +296,10 @@ class _DashboardState extends State<Dashboard> {
                                           fontWeight: FontWeight.w400,
                                         ),
                                       )
-                                    ]
-                                  )
-                                ),
+                                    ])),
                               ],
                             ),
-
                             const Spacer(),
-
                             Text(
                               '12m ago',
                               style: TextStyle(
@@ -343,14 +309,13 @@ class _DashboardState extends State<Dashboard> {
                                 fontStyle: FontStyle.italic,
                               ),
                             ),
-
                             SizedBox(
                               width: 10.w,
                             ),
-
                             SvgPicture.asset(
                               'assets/icons/ic-arrow-forward.svg',
-                              colorFilter: const ColorFilter.mode(kBlackColor, BlendMode.srcIn),
+                              colorFilter: const ColorFilter.mode(
+                                  kBlackColor, BlendMode.srcIn),
                             ),
                           ],
                         ),

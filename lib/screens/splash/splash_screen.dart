@@ -4,7 +4,6 @@ import 'package:nirsal/helpers/preference_helper.dart';
 import 'package:nirsal/routes.dart';
 import 'package:provider/provider.dart';
 
-import '../../helpers/api_helper.dart';
 import '../../models/objects.dart';
 import '../../providers/auth_provider.dart';
 
@@ -29,7 +28,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void validateAccess() async {
     String token = await PreferenceHelper().getAccessToken();
-    await ApiHelper.setInterceptor(token);
     UserModel? authUser = await PreferenceHelper().getAuthUser();
 
     if (token != '' && authUser != null) {

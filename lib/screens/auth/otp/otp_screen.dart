@@ -28,19 +28,15 @@ class OtpScreen extends StatelessWidget {
               'assets/images/nirsal.png',
               width: 73.w,
             ),
-
             SizedBox(
               height: 60.w,
             ),
-
             SvgPicture.asset(
               'assets/icons/ic-check-mail.svg',
             ),
-
             SizedBox(
               height: 32.w,
             ),
-
             Text(
               'Check your email',
               style: TextStyle(
@@ -49,11 +45,9 @@ class OtpScreen extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-
             SizedBox(
               height: 48.w,
             ),
-
             Text(
               'Please enter the code sent to',
               style: TextStyle(
@@ -62,11 +56,9 @@ class OtpScreen extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-
             SizedBox(
               height: 8.w,
             ),
-
             Text(
               'Jefferson.iwobi@nirsal.com',
               style: TextStyle(
@@ -76,11 +68,9 @@ class OtpScreen extends StatelessWidget {
                 fontStyle: FontStyle.italic,
               ),
             ),
-
             SizedBox(
               height: 32.w,
             ),
-
             Padding(
               padding: EdgeInsets.only(
                 top: 26.w,
@@ -144,11 +134,9 @@ class OtpScreen extends StatelessWidget {
                 ],
               ),
             ),
-
             SizedBox(
               height: 25.w,
             ),
-
             PrimaryButton(
               onTap: () {
                 // Navigator.pop(context);
@@ -159,11 +147,9 @@ class OtpScreen extends StatelessWidget {
               color: kYellowColor,
               textColor: kBlackColor,
             ),
-
             SizedBox(
               height: 25.w,
             ),
-
             Center(
               child: Text.rich(
                 TextSpan(
@@ -185,20 +171,16 @@ class OtpScreen extends StatelessWidget {
                 ),
               ),
             ),
-
             SizedBox(
               height: 60.w,
             ),
-
             Image.asset(
               'assets/images/armserv-bw.png',
               width: 85.w,
             ),
-
             SizedBox(
               height: 30.w,
             ),
-
             Image.asset(
               'assets/images/poweredby.png',
               width: 64.w,

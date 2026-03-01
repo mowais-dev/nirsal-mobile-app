@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide CarouselController;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -22,14 +22,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-  final CarouselController _carouselController = CarouselController();
+  final CarouselSliderController _carouselController =
+      CarouselSliderController();
 
   int activeTab = 0;
   int assignedActiveTab = 0;
   int currentSlider = 0;
-  
-  List items = [1,2,3];
+
+  List items = [1, 2, 3];
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,6 @@ class _HomeScreenState extends State<HomeScreen> {
               fit: BoxFit.cover,
             ),
           ),
-
           Padding(
             padding: EdgeInsets.only(
               top: 90.w,
@@ -54,17 +53,13 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               children: [
                 const UserData(),
-
                 SizedBox(
                   height: 16.w,
                 ),
-
                 const NotificationCenter(),
-
                 SizedBox(
                   height: 15.w,
                 ),
-
                 Container(
                   decoration: BoxDecoration(
                     color: kGreenShade1,
@@ -88,11 +83,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         activeTextColor: kPrimaryColor,
                         activeColor: kLightGreenShade3,
                       ),
-
                       SizedBox(
                         width: 15.w,
                       ),
-
                       TabSwitch(
                         onTap: () {
                           setState(() {
@@ -108,11 +101,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-
                 SizedBox(
                   height: 19.w,
                 ),
-
                 SizedBox(
                   height: 195.h,
                   child: CarouselSlider(
@@ -127,33 +118,31 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 195.h,
                     ),
                     carouselController: _carouselController,
-                    items: items.map((item) => Container(
-                      padding: const EdgeInsets.all(10.0),
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          RequestCard(),
-                          RequestCard(),
-                          RequestCard(),
-                        ],
-                      ),
-                    )).toList(),
+                    items: items
+                        .map((item) => Container(
+                              padding: const EdgeInsets.all(10.0),
+                              child: const Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  RequestCard(),
+                                  RequestCard(),
+                                  RequestCard(),
+                                ],
+                              ),
+                            ))
+                        .toList(),
                   ),
                 ),
-            
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
-                    items.length,
-                    (index) => buildDotNav(index: index)
-                  ),
+                      items.length, (index) => buildDotNav(index: index)),
                 ),
-
                 SizedBox(
                   height: 20.w,
                 ),
-
                 Container(
                   decoration: BoxDecoration(
                     color: kYellowColor,
@@ -177,11 +166,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         activeTextColor: kTextColor,
                         activeColor: kLightGrayShade3,
                       ),
-
                       SizedBox(
                         width: 15.w,
                       ),
-
                       TabSwitch(
                         onTap: () {
                           setState(() {
@@ -197,11 +184,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-
                 SizedBox(
                   height: 23.w,
                 ),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -211,11 +196,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
-
                 SizedBox(
                   height: 14.w,
                 ),
-
                 Expanded(
                   child: Align(
                     alignment: Alignment.topCenter,
@@ -248,9 +231,9 @@ class _HomeScreenState extends State<HomeScreen> {
       height: 8.w,
       width: 8.w,
       decoration: BoxDecoration(
-        color: currentSlider == index ? kBlackColor : kBlackColor.withAlpha(70),
-        borderRadius: BorderRadius.circular(4)
-      ),
+          color:
+              currentSlider == index ? kBlackColor : kBlackColor.withAlpha(70),
+          borderRadius: BorderRadius.circular(4)),
     );
   }
 }

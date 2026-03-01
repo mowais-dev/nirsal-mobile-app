@@ -20,51 +20,12 @@ class EditFarmerScreen extends StatefulWidget {
 }
 
 class _EditFarmerScreenState extends State<EditFarmerScreen> {
-
   int activeTab = 0;
   int activeSubTab = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        automaticallyImplyLeading: false,
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(
-              right: 30.0,
-            ),
-            child: SearchButton(),
-          ),
-        ],
-        title: Container(
-          width: double.infinity,
-          height: 43.w,
-          decoration: BoxDecoration(
-            color: kPrimaryColor,
-            borderRadius: BorderRadius.circular(9),
-            gradient: const LinearGradient(
-              colors: [
-                kPrimaryColor,
-                kLightGreenShade
-              ]
-            )
-          ),
-          alignment: Alignment.centerLeft,
-          padding: const EdgeInsets.only(
-            left: 23.0,
-          ),
-          child: Text(
-            'Edit Farmer',
-            style: TextStyle(
-              color: kWhiteColor,
-              fontWeight: FontWeight.bold,
-              fontSize: 15.sp,
-            ),
-          ),
-        ),
-      ),
       extendBodyBehindAppBar: true,
       body: BodyContainer(
         enableScroll: true,
@@ -78,7 +39,6 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                 fit: BoxFit.cover,
               ),
             ),
-        
             Padding(
               padding: EdgeInsets.only(
                 top: 90.w,
@@ -88,11 +48,9 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
               child: Column(
                 children: [
                   const FarmerAvatar(),
-                  
                   SizedBox(
                     height: 32.w,
                   ),
-        
                   Container(
                     decoration: BoxDecoration(
                       color: kGreenShade1,
@@ -115,7 +73,6 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                             ),
                           ),
                         ),
-        
                         Expanded(
                           flex: 2,
                           child: Text(
@@ -127,7 +84,6 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                             ),
                           ),
                         ),
-        
                         Expanded(
                           flex: 2,
                           child: Text(
@@ -142,11 +98,9 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                       ],
                     ),
                   ),
-        
                   SizedBox(
                     height: 19.w,
                   ),
-        
                   Container(
                     padding: EdgeInsets.symmetric(
                       horizontal: 20.w,
@@ -165,7 +119,6 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                             ),
                           ),
                         ),
-        
                         Expanded(
                           flex: 2,
                           child: Text(
@@ -177,7 +130,6 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                             ),
                           ),
                         ),
-        
                         Expanded(
                           flex: 2,
                           child: Text(
@@ -192,11 +144,9 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                       ],
                     ),
                   ),
-        
                   SizedBox(
                     height: 8.w,
                   ),
-        
                   Container(
                     decoration: BoxDecoration(
                       color: kGreenShade1,
@@ -212,7 +162,9 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                           flex: 2,
                           child: Container(
                             decoration: BoxDecoration(
-                              color: activeTab == 1 ? kWhiteColor.withOpacity(0.7) : null,
+                              color: activeTab == 1
+                                  ? kWhiteColor.withOpacity(0.7)
+                                  : null,
                               borderRadius: BorderRadius.circular(4.0),
                             ),
                             margin: const EdgeInsets.only(right: 20.0),
@@ -234,12 +186,13 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                             ),
                           ),
                         ),
-        
                         Expanded(
                           flex: 2,
                           child: Container(
                             decoration: BoxDecoration(
-                              color: activeTab == 2 ? kWhiteColor.withOpacity(0.7) : null,
+                              color: activeTab == 2
+                                  ? kWhiteColor.withOpacity(0.7)
+                                  : null,
                               borderRadius: BorderRadius.circular(4.0),
                             ),
                             margin: const EdgeInsets.only(right: 20.0),
@@ -261,12 +214,13 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                             ),
                           ),
                         ),
-        
                         Expanded(
                           flex: 2,
                           child: Container(
                             decoration: BoxDecoration(
-                              color: activeTab == 3 ? kWhiteColor.withOpacity(0.7) : null,
+                              color: activeTab == 3
+                                  ? kWhiteColor.withOpacity(0.7)
+                                  : null,
                               borderRadius: BorderRadius.circular(4.0),
                             ),
                             margin: const EdgeInsets.only(right: 20.0),
@@ -291,36 +245,33 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                       ],
                     ),
                   ),
-        
                   SizedBox(
                     height: 8.w,
                   ),
-        
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Column(
                         children: [
                           TextButton(
-                            onPressed: () {
-                              setState(() {
-                                activeSubTab = 1;
-                              });
-                            },
-                            style: const ButtonStyle(
-                              padding: WidgetStatePropertyAll(EdgeInsets.zero),
-                              minimumSize: WidgetStatePropertyAll(Size(0, 0)),
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            ),
-                            child: Text(
-                              'Program',
-                              style: TextStyle(
-                                fontSize: 14.sp,
-                                color: kGreenShade1,
+                              onPressed: () {
+                                setState(() {
+                                  activeSubTab = 1;
+                                });
+                              },
+                              style: const ButtonStyle(
+                                padding:
+                                    WidgetStatePropertyAll(EdgeInsets.zero),
+                                minimumSize: WidgetStatePropertyAll(Size(0, 0)),
+                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                               ),
-                            )
-                          ),
-                      
+                              child: Text(
+                                'Program',
+                                style: TextStyle(
+                                  fontSize: 14.sp,
+                                  color: kGreenShade1,
+                                ),
+                              )),
                           if (activeSubTab == 1) ...[
                             Container(
                               width: 70.w,
@@ -330,29 +281,27 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                           ],
                         ],
                       ),
-        
                       Column(
                         children: [
                           TextButton(
-                            onPressed: () {
-                              setState(() {
-                                activeSubTab = 2;
-                              });
-                            },
-                            style: const ButtonStyle(
-                              padding: WidgetStatePropertyAll(EdgeInsets.zero),
-                              minimumSize: WidgetStatePropertyAll(Size(0, 0)),
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            ),
-                            child: Text(
-                              'Profile',
-                              style: TextStyle(
-                                fontSize: 14.sp,
-                                color: kGreenShade1,
+                              onPressed: () {
+                                setState(() {
+                                  activeSubTab = 2;
+                                });
+                              },
+                              style: const ButtonStyle(
+                                padding:
+                                    WidgetStatePropertyAll(EdgeInsets.zero),
+                                minimumSize: WidgetStatePropertyAll(Size(0, 0)),
+                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                               ),
-                            )
-                          ),
-                      
+                              child: Text(
+                                'Profile',
+                                style: TextStyle(
+                                  fontSize: 14.sp,
+                                  color: kGreenShade1,
+                                ),
+                              )),
                           if (activeSubTab == 2) ...[
                             Container(
                               width: 70.w,
@@ -362,29 +311,27 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                           ],
                         ],
                       ),
-        
                       Column(
                         children: [
                           TextButton(
-                            onPressed: () {
-                              setState(() {
-                                activeSubTab = 3;
-                              });
-                            },
-                            style: const ButtonStyle(
-                              padding: WidgetStatePropertyAll(EdgeInsets.zero),
-                              minimumSize: WidgetStatePropertyAll(Size(0, 0)),
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            ),
-                            child: Text(
-                              'Biometrics',
-                              style: TextStyle(
-                                fontSize: 14.sp,
-                                color: kGreenShade1,
+                              onPressed: () {
+                                setState(() {
+                                  activeSubTab = 3;
+                                });
+                              },
+                              style: const ButtonStyle(
+                                padding:
+                                    WidgetStatePropertyAll(EdgeInsets.zero),
+                                minimumSize: WidgetStatePropertyAll(Size(0, 0)),
+                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                               ),
-                            )
-                          ),
-                      
+                              child: Text(
+                                'Biometrics',
+                                style: TextStyle(
+                                  fontSize: 14.sp,
+                                  color: kGreenShade1,
+                                ),
+                              )),
                           if (activeSubTab == 3) ...[
                             Container(
                               width: 70.w,
@@ -394,29 +341,27 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                           ],
                         ],
                       ),
-        
                       Column(
                         children: [
                           TextButton(
-                            onPressed: () {
-                              setState(() {
-                                activeSubTab = 4;
-                              });
-                            },
-                            style: const ButtonStyle(
-                              padding: WidgetStatePropertyAll(EdgeInsets.zero),
-                              minimumSize: WidgetStatePropertyAll(Size(0, 0)),
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            ),
-                            child: Text(
-                              'Farm',
-                              style: TextStyle(
-                                fontSize: 14.sp,
-                                color: kGreenShade1,
+                              onPressed: () {
+                                setState(() {
+                                  activeSubTab = 4;
+                                });
+                              },
+                              style: const ButtonStyle(
+                                padding:
+                                    WidgetStatePropertyAll(EdgeInsets.zero),
+                                minimumSize: WidgetStatePropertyAll(Size(0, 0)),
+                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                               ),
-                            )
-                          ),
-                      
+                              child: Text(
+                                'Farm',
+                                style: TextStyle(
+                                  fontSize: 14.sp,
+                                  color: kGreenShade1,
+                                ),
+                              )),
                           if (activeSubTab == 4) ...[
                             Container(
                               width: 70.w,
@@ -428,11 +373,9 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                       ),
                     ],
                   ),
-        
                   SizedBox(
                     height: 15.w,
                   ),
-        
                   Container(
                     decoration: BoxDecoration(
                       color: kLightGrayShade3,
@@ -447,26 +390,21 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                         if (activeSubTab == 1) ...[
                           const ProgramTab(),
                         ],
-
                         if (activeSubTab == 2) ...[
                           const FarmerProfileTab(),
                         ],
-
                         if (activeSubTab == 3) ...[
                           const BiometricTab(),
                         ],
-
                         if (activeSubTab == 4) ...[
                           const FarmTab(),
                         ],
                       ],
                     ),
                   ),
-
                   SizedBox(
                     height: 20.w,
                   ),
-
                   if (activeSubTab == 4) ...[
                     Row(
                       children: [
@@ -479,11 +417,9 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                             textColor: kBlackColor,
                           ),
                         ),
-
                         SizedBox(
                           width: 50.w,
                         ),
-
                         Expanded(
                           child: PrimaryButton(
                             onTap: () {},
@@ -496,7 +432,6 @@ class _EditFarmerScreenState extends State<EditFarmerScreen> {
                       ],
                     )
                   ],
-
                   SizedBox(
                     height: 20.w,
                   ),

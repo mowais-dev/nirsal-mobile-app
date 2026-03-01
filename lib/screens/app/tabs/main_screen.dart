@@ -16,7 +16,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
   int selectedTab = 0;
 
   List<Widget> screens = [
@@ -39,44 +38,6 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        automaticallyImplyLeading: false,
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(
-              right: 30.0,
-            ),
-            child: SearchButton(),
-          ),
-        ],
-        title: selectedTab != 0 ? Container(
-          width: double.infinity,
-          height: 43.w,
-          decoration: BoxDecoration(
-            color: kPrimaryColor,
-            borderRadius: BorderRadius.circular(9),
-            gradient: const LinearGradient(
-              colors: [
-                kPrimaryColor,
-                kLightGreenShade
-              ]
-            )
-          ),
-          alignment: Alignment.centerLeft,
-          padding: const EdgeInsets.only(
-            left: 23.0,
-          ),
-          child: Text(
-            getTitle(),
-            style: TextStyle(
-              color: kWhiteColor,
-              fontWeight: FontWeight.bold,
-              fontSize: 15.sp,
-            ),
-          ),
-        ) : null,
-      ),
       body: screens[selectedTab],
       extendBodyBehindAppBar: true,
       bottomNavigationBar: Padding(
@@ -92,24 +53,20 @@ class _MainScreenState extends State<MainScreen> {
                   width: double.infinity,
                   height: 80.w,
                   decoration: BoxDecoration(
-                    color: kPrimaryColor,
-                    borderRadius: BorderRadius.circular(22.w),
-                    gradient: LinearGradient(
-                      colors: [
-                        kPrimaryColor.withOpacity(0.5),
-                        kPrimaryColor.withOpacity(0.6),
-                        kPrimaryColor,
-                        kPrimaryColor,
-                        kPrimaryColor.withOpacity(0.6),
-                        kPrimaryColor.withOpacity(0.5),
-                      ],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      stops: const [
-                        0, 0.1, 0.3, 0.7, 0.9, 1
-                      ]
-                    )
-                  ),
+                      color: kPrimaryColor,
+                      borderRadius: BorderRadius.circular(22.w),
+                      gradient: LinearGradient(
+                          colors: [
+                            kPrimaryColor.withOpacity(0.5),
+                            kPrimaryColor.withOpacity(0.6),
+                            kPrimaryColor,
+                            kPrimaryColor,
+                            kPrimaryColor.withOpacity(0.6),
+                            kPrimaryColor.withOpacity(0.5),
+                          ],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          stops: const [0, 0.1, 0.3, 0.7, 0.9, 1])),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 10.0,
@@ -128,7 +85,7 @@ class _MainScreenState extends State<MainScreen> {
                             });
                           },
                         ),
-                
+
                         TabButton(
                           icon: 'assets/icons/ic-users.svg',
                           title: 'Farmers',
@@ -139,11 +96,11 @@ class _MainScreenState extends State<MainScreen> {
                             });
                           },
                         ),
-                
+
                         // SizedBox(
                         //   width: 30.w,
                         // ),
-                
+
                         TabButton(
                           icon: 'assets/icons/ic-bell.svg',
                           title: 'Alerts',
@@ -154,7 +111,7 @@ class _MainScreenState extends State<MainScreen> {
                             });
                           },
                         ),
-                
+
                         TabButton(
                           icon: 'assets/icons/ic-settings.svg',
                           title: 'Settings',
@@ -180,7 +137,7 @@ class _MainScreenState extends State<MainScreen> {
               //       size: 80.w,
               //       color: kPrimaryColor,
               //       onTap: () {
-                      
+
               //       },
               //       borderColor: kWhiteColor,
               //       borderWidth: 10,
