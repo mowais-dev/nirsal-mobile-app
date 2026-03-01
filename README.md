@@ -31,7 +31,7 @@ Mobile field app for NIRSAL built with Flutter, integrating a Laravel backend. S
 ## Screenshots
 | Dashboard | Get Started | Login | Farmer Detail | Area Capture |
 | --- | --- | --- | --- | --- |
-| ![Dashboard](screenshots/dashboard.png) | ![Get Started](screenshots/getstarted.png) | ![Login](screenshots/login.png) | ![Details](screenshots/datailspage.png) | ![Map Capture](screenshots/Screenshot%202026-03-01%20204428.png) |
+| ![Dashboard](screenshots/dashboard.png) | ![Get Started](screenshots/getstarted.png) | ![Login](screenshots/login.png) | ![Details](screenshots/datailspage.png) | ![Map Capture](screenshots/areacalculator.png) |
 
 ## Development Notes
 - Initial route: Splash → Welcome/Login → Main tabs (Home, Farmers, Dashboard, Settings).
